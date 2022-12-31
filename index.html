@@ -1,8 +1,63 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-      </head>
-    <body>
-        <script src="bundle.js"></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="header">
+        Yahoo's NFT Displayooooooor
+    </div>
+
+
+    <input id="address-input" type="text" />
+    <button id="submit-button">Submit</button>
+    <!-- Your address: -->
+    <div>
+        Your address:
+        <h1 id="address"></h1>
+
+    </div>
+    <div>
+        Eth balance:
+        <h1 id="balance"></h1>
+    </div>
+    <div>
+        Your NFTs:
+
+        <ul id="NFT-List">
+
+            <!-- <script>
+                // document.write()
+
+                // Get the unordered list element
+                var list = document.getElementById('NFT-List');
+
+                // Loop through the array and add each item as a list item
+                for (var i = 0; i < list.length; i++) {
+                    var item = document.createElement('li');
+                    item.innerHTML = list[i];
+                    list.appendChild(item);
+                }
+            </script> -->
+        </ul>
+
+
+        <div>
+            <h1 id="NFTname"></h1>
+            <img src="" id="NFTimage">
+        </div>
+        <div>
+            <h1 id="NFTname2"></h1>
+            <img src="" id="NFTimage2">
+        </div>
+
+    </div>
+    <!-- <span id="address"></span> -->
+
+    <script src="bundle.js"></script>
+
+</body>
+
 </html>

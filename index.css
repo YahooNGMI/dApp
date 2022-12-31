@@ -1,0 +1,19 @@
+body {
+    background-color: #d2c793;
+    /* blue */
+}
+
+.header {
+    background-color: #3d3da3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* line-height: 200px; */
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    border-radius: 40px;
+}
