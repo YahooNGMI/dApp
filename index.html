@@ -6,35 +6,46 @@
 
 
 <body>
+    <div id="Profile-Link">
+        <button style="display: none" id="connectWallet">Connect Wallet</button>
+        <a href="myProfile.html">My Profile</a>
+        <a href="tradingPage.html">Trading Page</a>
+    </div>
     <div class="header">
-        Yahoo's NFT Displayooooooor
+        Yahoo's NFT Displayooooooor<br>
     </div>
 
+    <div>Display NFTs from any Ethereum address for the first time ever!</div>
     <div id="inputField">
-
-        <div>Enter an Etherem address: <input id="address-input" type="text" /></div>
+        <div><input id="address-input" type="text" placeholder="Enter an Ethereum Address" size="35px" /></div>
         <div><button id="submit-button">Submit</button></div>
-
-
     </div>
 
     <div id="displayField">
-        Your address:<div id="address"></div>
+        Entered Address:<div id="address"><br> </div>
+        Ethereum Balance:<div id="balance"> <br></div>
 
-        Your Balance:<div id="balance"></div>
+
+    </div>
+    <br>
+
+    <div>
+        <div id="left-container">
+
+            <h2>Filler Text</h2>
+
+            <!-- <div class="myDIV">Hover over me.</div>
+            <div class="hide">I am shown when someone hovers over the div above.</div> -->
+
+        </div>
+        <div id="right-container">
+            <div id="container"></div>
+        </div>
+
 
     </div>
 
-    <!-- <div class="NFTstyle">
-        <div id="nftCard"> -->
-    <!-- <div id="nftTitle">title</div>
-    <div id="nftimage">image</div>
 
-    <div id="nftBalance">balance</div>
-    </div> -->
-    <!-- </div> -->
-
-    <div id="container"></div>
     <script src="bundle.js"></script>
 </body>
 
