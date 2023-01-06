@@ -19,41 +19,70 @@
     <div id="inputField">
         <button id="connectWallet">Connect Wallet</button>
     </div>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" style="display:none">Open Modal</button>
 
+    <script> console.log("weewoo")</script>
+    <div id="myModal" class="modal" style="display:none">
+        <script>
+            console.log("outside");
+        </script>
+        <div class="modal-content">
+            <script>
+                console.log("inside")
+            </script>
+            <span class="close">&times;</span>
+            <div id="title"> </div>
+
+            <div id="imageURL"></div>
+            <div id="description"> </div>
+            <div id="balance"> </div>
+
+            <!-- <div id="contractAddress"> </div>
+            <div id="createdBy"> </div>
+            <div id="externalURL"> </div> -->
+
+
+        </div>
+
+    </div>
     <div id="displayField">
         Entered Address:<div id="myAddress"><br> </div>
         Ethereum Balance:<div id="myBalance"> <br></div>
     </div>
-    <div id="inputField">
-        <div>Enter the address of the other person you will be trading with:<div>
-                <div><input id="address-input" type="text" placeholder="Enter an Ethereum Address" size="35px" /></div>
-                <div><button id="submit-button">Submit</button></div>
-                Entered Address:<div id="address"><br> </div>
-            </div>
-            <div id="trading-section">
-                Selected NFTs to trade
-                <div id="right-container-top">
-                    Your Selected NFTs
-                    <div id="myselectedNFT"></div>
-                </div>
-                <div id="left-container-top">
-                    Their Selected NFTs
-                    <div id="selectedNFT"></div>
-                    <br>
 
+    <div>
+        <div id="inputField">
+            <div>Enter the address of the other person you will be trading with:<div>
+                    <div><input id="address-input" type="text" placeholder="Enter an Ethereum Address" size="35px" />
+                    </div>
+                    <div><button id="submit-button">Submit</button></div>
+                    Entered Address:<div id="address"><br> </div>
                 </div>
-            </div>
-            <div>
-                <div id="left-container">
-                    Their NFT collection
-                    <div id="container"></div>
+                <div id="trading-section">
+                    Selected NFTs to trade
+                    <div id="right-container-top">
+                        Your Selected NFTs
+                        <div id="myselectedNFT"></div>
+                    </div>
+                    <div id="left-container-top">
+                        Their Selected NFTs
+                        <div id="selectedNFT"></div>
+                        <br>
+
+                    </div>
                 </div>
-                <div id="right-container">
-                    Your NFT collection
-                    <div id="myContainer"></div>
+                <div>
+                    <div id="left-container">
+                        Their NFT collection
+                        <div id="container"></div>
+                    </div>
+                    <div id="right-container">
+                        Your NFT collection
+                        <div id="myContainer"></div>
+                    </div>
                 </div>
-            </div>
-            <script src="bundle.js"></script>
+                <script src="bundle.js"></script>
 </body>
 
 </html>

@@ -154,7 +154,7 @@ body {
     margin: 10px;
     margin-bottom: 20px;
     transition: 1s;
-    z-index: 10;
+    /* z-index: 10; */
     background: rgb(55, 51, 51)
 }
 
@@ -198,7 +198,7 @@ body {
 }
 
 .img {
-
+    z-index: 5;
     max-width: 75%;
     height: 50%;
     margin-top: 2%;
@@ -220,7 +220,7 @@ body {
 
 .h3 {
     height: 15%;
-    width: 90%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,21 +229,48 @@ body {
     /* padding-bottom: 50% */
     /* margin-bottom: 5%; */
     margin-left: 5%;
-    margin-right: 5%;
-
+    /* margin-right: 5%; */
+    float: left;
     font-size: 75%;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
 
 }
 
-
-.myh3 {
+.hButton {
     height: 15%;
-    width: 90%;
+    width: 15%;
+    
+    float: right;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* bottom: 5px; */
+    vertical-align: top;
+    /* padding-bottom: 50% */
+    /* margin-bottom: 5%; */
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    margin-top: 10;
+    font-size: 200%;
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-radius: 5px;
+    z-index: 10;
+
+}
+
+.hButton:hover {
+    display: block;
+    /* border: 1px solid red; */
+}
+
+
+.myh3 {
+    height: 15%;
+    width: 40%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
     /* bottom: 5px; */
     /* vertical-align: top; */
     /* padding-bottom: 50% */
@@ -329,14 +356,167 @@ body {
     left: 50%;
     width: 50%;
     height: 1000px;
-    position: absolute;
     border-top: 2px solid white;
     border-left: 3px solid white;
     position: absolute;
 }
 
 #trading-section {
-    height: 500px;
+    height: 320px;
     /* border: 2px solid red; */
 
+}
+
+.button.loading {
+    content: "⟳";
+    /* unicode for a circular arrow */
+    font-size: 18px;
+    color: #ccc;
+}
+
+button.loading {
+    pointer-events: none;
+    /* disable button */
+    opacity: 0.6;
+    /* make button transparent */
+}
+
+button.loading:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background-image: url('loading-spinner.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: flex;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* border: 1px solid yellow;
+     */
+    border-radius: 15px;
+    /* Sit on top */
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    /* Full width */
+    height: 80%;
+    /* Full height */
+    overflow: scroll;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    contain: content;
+    background-color: #433d3d;
+    overflow: scroll;
+    /* margin: 15% auto; */
+    /* 15% from the top and centered */
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    /* Could be more or less, depending on screen size */
+}
+
+#title {
+    height: 5%;
+    width: 90%;
+    /* display: flex; */
+    text-align: center;
+    /* justify-content: center; */
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: auto;
+    font-size: 75%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#imageURL {
+    z-index: 5;
+    contain: content;
+    /* border: 5px solid cyan; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 50%;
+    margin-top: 2%;
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-radius: 5px;
+    /* background-color: gray; */
+}
+
+#description {
+    display: flex;
+    text-align: left;
+    margin-left: 0%;
+    /* border-bottom: 1px solid rgb(237, 237, 237); */
+    width: 100%;
+    height: 120px;
+    overflow: scroll;
+}
+
+#balance {
+    /* display: flex; */
+    text-align: left;
+    margin-left: 0%;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    width: 100%;
+    height: 120px;
+    overflow: scroll;
+    /* padding: 20px; */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#title {
+    border: 1px solid white;
+}
+
+#description::before {
+    content: "Description: ";
+    color: rgb(79, 79, 148);
+    font-size: 18px;
+}
+
+#balance::before {
+    content: "Balance: ";
+    color: rgb(79, 79, 148);
+    font-size: 18px;
+}
+
+#contractAddress::before {
+    content: "Contract Address ";
+    color: rgb(79, 79, 148);
+    font-size: 18px;
 }
